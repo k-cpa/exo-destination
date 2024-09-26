@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: grey;
+    width: 100%;
+    height: 50px;
+}
+
+nav {
+    margin-right: 15em;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+  }
+
+.container_destinations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.cards_cities {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid;
+    overflow: hidden;
+    width: 400px;
+    height: 550px; 
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 5em;
+}
+
+.cards img  {
+    height: 55%;
+    width: 100%;
+    margin-bottom: 0;
+    object-fit: cover;
+}
+
+.cards h2, .cards p {
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+.button {
+    align-self: center;
+    margin-top: 60px;
+}
+
+.button a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.button a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.button a:hover::before {
+    opacity: 1; 
+}
+
+#paris_button {
+    background-color: purple;
+}
+
+#tokyo_button {
+    background-color: red;
+}
+
+#NY_button {
+    background-color: rgb(131, 50, 171);
+}
