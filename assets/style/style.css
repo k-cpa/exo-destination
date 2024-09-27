@@ -24,6 +24,7 @@ header {
 
 nav {
     margin-right: 15em;
+    z-index: 1001;
 }
 
 nav a {
@@ -32,7 +33,6 @@ nav a {
     padding: 1em;
     font-weight: 500;
 }
-
 nav a:hover {
     text-decoration: underline;
   }
@@ -64,6 +64,31 @@ nav a:hover {
     height: 550px; 
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
     margin-top: 5em;
+    position: relative;
+    z-index: 999;
+}
+
+.cards::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    animation: rideauFadeIn .7s ease-in forwards;
+    animation-delay: .5s;
+    z-index: 1000;
+}
+
+.cards {
+&:nth-child(2) {
+    &::after {
+        animation-delay: .3s;
+    }
+}
+&:nth-child(3) {
+    &::after {
+        animation-delay: .1s;
+    }
+}
 }
 
 .cards img  {
@@ -120,4 +145,14 @@ nav a:hover {
 
 #NY_button {
     background-color: rgb(131, 50, 171);
+}
+
+/* Animation cards */
+@keyframes rideauFadeIn {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
